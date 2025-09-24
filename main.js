@@ -5,7 +5,7 @@ const productlist = [
         price: 4000,
         description: "Четвёртый полноформатный альбом Stray Kids, выпущенный 22 августа 2025 года, последний камбек",
         img: {
-            pic: 'img/KARMA.jpg',
+            pic: 'photo/KARMA.jpg',
             alt: 'Karma'
         }
     },
@@ -15,7 +15,7 @@ const productlist = [
         price: 3400,
         description: "Девятый мини-альбом Stray Kids c хитом 'Chk Chk Boom' в качестве заглавного трека",
         img: {
-            pic:'img/ATE.jpg',
+            pic:'photo/ATE.jpg',
             alt: 'ATE'
         }
     }, 
@@ -25,7 +25,7 @@ const productlist = [
         price: 2000,
         description: "Третий студийный альбом Stray Kids, был признан лучшим альбомом на церемониях Billboard Music Awards",
         img: {
-            pic:'img/5-STAR.jpg',
+            pic:'photo/5-STAR.jpg',
             alt: '5-STAR'
         }
     },
@@ -35,7 +35,7 @@ const productlist = [
         price: 2500,
         description: "Второй студийный альбом Stray Kids, содержит одну из самых любимых песен создателя сайта",
         img: {
-            pic:'img/NOEASY.jpg',
+            pic:'photo/NOEASY.jpg',
             alt: 'NOEASY'
         }
     },
@@ -46,7 +46,7 @@ const productlist = [
         price: 2000,
         description: "Cингловый альбом Stray Kids, сочетающий в себе новогоднюю атмосферу и фирменный стиль группы",
         img: {
-            pic:'img/Christmas_EveL.jpg',
+            pic:'photo/Christmas_EveL.jpg',
             alt: 'Christmas EveL'
         }
     },
@@ -57,7 +57,7 @@ const productlist = [
         price: 3000,
         description: "Дебютный альбом Stray Kids, символизирующий начало их пути и поиска их  собственного стиля",
         img: {
-            pic:'img/I_Am_Not.jpg',
+            pic:'photo/I_Am_Not.jpg',
             alt: 'I Am Not'
         }
     }
