@@ -19,7 +19,7 @@ const productlist = [
             alt: 'ATE'
         }
     }, 
-    {
+    { 
         id: 3,
         name: "5-STAR",
         price: 2000,
