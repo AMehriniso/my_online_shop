@@ -98,6 +98,26 @@ function addToBasket(product) {
   renderbasket();
 }
 
+function changeQuantity(id, delta) {
+  const idx = basket.findIndex(p => p.id === id);
+  if (idx === -1) return;
+  const current = basket[idx].quantity || 1;
+  const next = current + delta;
+  if (next <= 0) {
+    basket.splice(idx, 1);
+  } else {
+    basket[idx].quantity = next;
+  }
+  renderbasket();
+}
+
+function basketTotal() {
+  return basket.reduce((sum, item) => {
+    const q = item.quantity || 1;
+    return sum + item.price * q;
+  }, 0);
+}
+
 function renderbasket() {
     const basketList = document.querySelector('.basket-list');
 
@@ -130,4 +150,43 @@ function renderbasket() {
       `;
     bindCheckout();
 }
+
+localStorage.getItem('basket') && JSON.parse(localStorage.getItem('basket')).forEach(item => basket.push(item));
+renderbasket();
+
+document.addEventListener('click', (e) => {
+  const decBtn = e.target.closest('.decrease');
+  const incBtn = e.target.closest('.increase');
+  if (!decBtn && !incBtn) return;
+
+  const li = e.target.closest('li[data-id]');
+
+  if (!li) return;
+
+  const id = Number(li.getAttribute('data-id'));
+  changeQuantity(id, incBtn ? +1 : -1);
+});
+
+productlist.forEach(product => {
+    const card = createCard(product);
+    catalogList.appendChild(card);
+});
+
+document.addEventListener('click', (e) => {
+    const buyBtn = e.target.closest('.buy-button');
+    if (!buyBtn) return;
+
+    const productId = buyBtn.parentElement.getAttribute('id');
+    const product = productlist.find(p => p.id == productId);
+
+    if (!product) return;
+
+    let item = basket.find(p => p.id == product.id);
+    if (item) {
+        item.quantity = (item.quantity || 1) + 1;
+    } else {
+        basket.push({ ...product, quantity: 1 });
+    }
+    renderbasket();
+});
 
