@@ -5,7 +5,7 @@ const productlist = [
         price: 4000,
         description: "Четвёртый полноформатный альбом Stray Kids, выпущенный 22 августа 2025 года, последний камбек",
         img: {
-            pic: 'photo/KARMA.jpg',
+            pic: 'photo/karma.jpg',
             alt: 'Karma'
         }
     }, 
@@ -57,7 +57,7 @@ const productlist = [
         price: 3000,
         description: "Дебютный альбом Stray Kids, символизирующий начало их пути и поиска их  собственного стиля",
         img: {
-            pic:'photo/I_Am_Not.jpg',
+            pic:'photo/i_am_NOT.jpg',
             alt: 'I Am Not'
         }
     }
