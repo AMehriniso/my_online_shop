@@ -351,6 +351,12 @@ footer {
 
     .modal-content h2 { font-size: 20px; }
 
+    .modal-content form {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 12px 16px;
+    }
+
 
     .modal-content h2,
     .modal-content button[type="submit"] {
@@ -397,7 +403,10 @@ footer {
     }
 
     .modal-content h2 { font-size: 22px; }
-
+    .modal-content form {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px 18px;
+    }
     .modal-content h2,
     .modal-content button[type="submit"] {
         grid-column: 1 / span 12;
