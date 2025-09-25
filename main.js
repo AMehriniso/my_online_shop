@@ -204,6 +204,15 @@ document.addEventListener('click', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const phoneInput = form.querySelector('input[name="phone"]'); 
+    const phoneValue = phoneInput.value.trim();
+    const phoneRegex = /^(\+7|8)\d{10}$/;
+
+    if (!phoneRegex.test(phoneValue)) {
+        alert("Введите корректный номер телефона в формате +7XXXXXXXXXX или 8XXXXXXXXXX");
+        phoneInput.focus();
+        return; 
+    }
     successBlock.style.display = 'block';
     form.style.display = 'none';
     basket.length = 0;
