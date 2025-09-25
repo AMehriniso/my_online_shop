@@ -200,11 +200,10 @@ document.addEventListener('click', (e) => {
     renderbasket();
 });
 
+const closeModalBtn = document.querySelector('.close-button');
 closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('is-open');
 });
-const closeModalBtn = document.querySelector('.close-button');
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     successBlock.style.display = 'block';
