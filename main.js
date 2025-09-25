@@ -202,9 +202,6 @@ document.addEventListener('click', (e) => {
     renderbasket();
 });
 
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('is-open');
-});
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     successBlock.style.display = 'block';
@@ -214,9 +211,20 @@ form.addEventListener('submit', (e) => {
     renderbasket();
     form.reset();
 });
+
+function resetModal() {
+    successBlock.style.display = 'none';
+    form.style.display = 'block';
+}
+
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('is-open');
+    resetModal();
+});
+
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.remove('is-open');
+        resetModal();
     }
 });
-
