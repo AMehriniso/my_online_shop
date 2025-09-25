@@ -71,6 +71,8 @@ const basket = [];
 const catalogList = document.getElementById('catalog-list');
 const modal = document.querySelector('.modal');
 const form = document.getElementById('order-form');
+const buyButtons = document.querySelectorAll('.buy-button');
+const closeModalBtn = document.querySelector('.close-button');
 const successBlock = document.querySelector('.success');
 
 
@@ -200,7 +202,6 @@ document.addEventListener('click', (e) => {
     renderbasket();
 });
 
-const closeModalBtn = document.querySelector('.close-button');
 closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('is-open');
 });
