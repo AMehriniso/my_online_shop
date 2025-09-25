@@ -101,6 +101,105 @@ h2 {
     color: #2c3e50;
 }
 
+button {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #34495e;
+}
+
+button.remove {
+    background: #c0392b;
+}
+
+button.remove:hover {
+    background: #e74c3c;
+}
+
+.checkout-button {
+    display: inline-block;
+    width: 50%;
+    padding: 12px 20px;
+    background: #27ae60;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.checkout-button:hover {
+    background: #303d82;
+}
+
+.checkout-button:active {
+    transform: translateY(1px);
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.basket-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-controls .quantity {
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.price-counter {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+
 @media (min-width: 768px) {
   .container {
     flex-direction: row; 
@@ -115,6 +214,18 @@ h2 {
 
   .navbar_menu {
     flex-direction: row;
+    gap: 15px;
+  }
+
+  .checkout-button {
+    width: auto;
+    min-width: 200px;
+    font-size: 17px;
+    padding: 12px 28px;
+  }
+  .catalog-list, .basket-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
 }
@@ -137,4 +248,14 @@ h2 {
   .navbar_menu li a {
     padding: 10px 16px; 
   }
+  .catalog-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .checkout-button {
+    font-size: 18px;
+    padding: 14px 32px;
+    border-radius: 10px;
+  }
+
 }
