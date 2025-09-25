@@ -58,7 +58,7 @@ const productlist = [
         price: 3000,
         description: "Дебютный альбом Stray Kids, символизирующий начало их пути и поиска их  собственного стиля",
         img: {
-            pic:'photo/i_am_NOT.jpg',
+            pic:'photo/I_am_NOT.jpg',
             alt: 'I Am Not'
         }
     }
@@ -203,12 +203,14 @@ document.addEventListener('click', (e) => {
 closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('is-open');
 });
+const closeModalBtn = document.querySelector('.close-button');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     successBlock.style.display = 'block';
     form.style.display = 'none';
     basket.length = 0;
+    localStorage.removeItem('basket');
     renderbasket();
     form.reset();
 });
