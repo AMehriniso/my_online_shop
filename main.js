@@ -118,6 +118,15 @@ function basketTotal() {
   }, 0);
 }
 
+function bindCheckout() {
+    const checkoutButton = document.querySelector('.checkout-button');
+    if (!checkoutButton) return;
+    checkoutButton.onclick = () => {
+        if (!basket.length) return alert('Ваша корзина пуста!');
+        document.querySelector('.modal').classList.add('is-open');
+    };
+}
+
 function renderbasket() {
     const basketList = document.querySelector('.basket-list');
 
@@ -188,5 +197,23 @@ document.addEventListener('click', (e) => {
         basket.push({ ...product, quantity: 1 });
     }
     renderbasket();
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('is-open');
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    successBlock.style.display = 'block';
+    form.style.display = 'none';
+    basket.length = 0;
+    renderbasket();
+    form.reset();
+});
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.remove('is-open');
+    }
 });
 
