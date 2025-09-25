@@ -214,7 +214,7 @@ form.addEventListener('submit', (e) => {
 
 function resetModal() {
     successBlock.style.display = 'none';
-    form.style.display = 'block';
+    orm.style.removeProperty('display');
 }
 
 closeModalBtn.addEventListener('click', () => {
