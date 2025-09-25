@@ -27,7 +27,7 @@ header {
   font-weight: bold;
   margin-bottom: 10px;
   color: #bbd4fbc9;
-  lign-items: center;
+  align-items: center;
 }
 .header__logo img {
     width: 30px;                
