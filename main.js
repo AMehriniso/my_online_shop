@@ -8,7 +8,7 @@ const productlist = [
             pic: 'photo/KARMA.jpg',
             alt: 'Karma'
         }
-    },
+    }, 
     {   
         id: 2,
         name: "ATE",
